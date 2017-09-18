@@ -1,38 +1,37 @@
 # PPII_Classifier
-############################################################################################
-#   Secondary structure classifier and collator, for PPII secondary structure              #
-#   Author : Rithvik Vinekar. Written at Bioinformatics Institute, A*STAR Singapore        #
-#   Inputs from Sathya Dev Unudurthi, NUS Singapore and project Advisor(s)                 #
-#   Uses vmd                                                                               #
-#   vmd -dispdev text -e PPII_Classify.vmd -args *.pdb                                     #
-#   README for PPII Classifier                                                             #
-#  License: to be decided according to Institute policies                                  #
-############################################################################################
-
+##Secondary structure classifier and collator, for PPII secondary structure              
+Author : Rithvik Vinekar. Written at Bioinformatics Institute, A*STAR Singapore
+   Inputs from Sathya Dev Unudurthi, NUS Singapore and project Advisor(s)      
+   Uses vmd                                                                               #
+```
+   vmd -dispdev text -e PPII_Classify.vmd -args *.pdb                                     
+```
+##README for PPII Classifier                                                             #
+-----
 Tested with VMD 1.8.7. Mileage may vary for other versions..
 
 Usage :-
 1] Create an xls directory (Writable) for output files
 2] Create xtl and segno directories and put output of xtl and Segno there. (or modify the script to call the external programs)
 
-# Batch mode - output to file
-
+### Batch mode - output to file
+```
 vmd -dispdev text -e PPII_Classify.vmd.tcl -args -a pdbs/*.pdb 2>&1 > output_file
-
-# Interactive mode
-
+```
+### Interactive mode
+```
 vmd -dispdev text -e PPII_Classify.vmd.tcl -args pdbs/*.pdb
-
+```
 
 Tips:
 
-*  instead of *.pdb, you can be more specific. 1*.pdb , 1A*.pdb 1ARP.pdb etc.
-*  insert a '-a'  after -args, then specify pdb files, if you are redirecting output to a file. Significantly reduces file i/o and the output_file size.
+- instead of *.pdb, you can be more specific. 1*.pdb , 1A*.pdb 1ARP.pdb etc.
+- insert a `-a`  after -args, then specify pdb files, if you are redirecting output to a file. Significantly reduces file i/o and the output_file size.
 
 Note : must be run from top level directory. to change, edit the Path variable in PPII_Classify.vmd
 
-Filesystem structure
-
+####Filesystem structure
+```
 /
 |
 -- PPII_Classify.vmd.tcl  - Main wrapper script
@@ -58,4 +57,4 @@ Format : Column headings self-explanatory.
 #	Residue	Chain	Segment	RES	Phi	Psi	Diheco1/Zeta	Diheco2	Alpha	Tau	Dk	Avg_phi	Avg_psi	Avg_Diheco1	Avg_Diheco2	Stride	Crystal	Eswar	Stapeley	Regularity	Adzhubei	Segno	XTLSTTR	#
 
 => rejects (pdb files which for some reason cannot be handled. Manually dropped here)
-
+```
