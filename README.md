@@ -1,18 +1,20 @@
 # PPII_Classifier
-##Secondary structure classifier and collator, for PPII secondary structure              
+Originally hosted on Dropbox https://www.dropbox.com/sh/698cy79q16ed6da/AAAChkFuAnxIGDUB3Vnp3tR8a?dl=0
+
+## Secondary structure classifier and collator, for PPII secondary structure              
 Author : Rithvik Vinekar. Written at Bioinformatics Institute, A*STAR Singapore
    Inputs from Sathya Dev Unudurthi, NUS Singapore and project Advisor(s)      
-   Uses vmd                                                                               #
+   Uses **vmd**
 ```
    vmd -dispdev text -e PPII_Classify.vmd -args *.pdb                                     
 ```
-##README for PPII Classifier                                                             #
+## README for PPII Classifier                                                             #
 -----
 Tested with VMD 1.8.7. Mileage may vary for other versions..
 
 Usage :-
-1] Create an xls directory (Writable) for output files
-2] Create xtl and segno directories and put output of xtl and Segno there. (or modify the script to call the external programs)
+1. Create an xls directory (Writable) for output files
+2. Create xtl and segno directories and put output of xtl and Segno there. (or modify the script to call the external programs)
 
 ### Batch mode - output to file
 ```
@@ -30,7 +32,7 @@ Tips:
 
 Note : must be run from top level directory. to change, edit the Path variable in PPII_Classify.vmd
 
-####Filesystem structure
+#### Filesystem structure
 ```
 /
 |
