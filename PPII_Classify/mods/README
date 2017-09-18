@@ -1,0 +1,12 @@
+############################################################################################
+#   Secondary structure classifier and collator, for PPII secondary structure              #
+#   Author : Rithvik Vinekar. Written at Bioinformatics Institute, A*STAR Singapore        #
+#   Inputs from Sathya Dev Unudurthi, NUS Singapore and project Advisor(s)                 #
+#   Uses vmd                                                                               #
+#   vmd -dispdev text -e PPII_Classify.vmd.tcl -args *.pdb                                 #
+#   README for PPII Classifier                                                             #
+#  License: to be decided according to Institute policies                                  #
+############################################################################################
+
+Class_Segno.mod.vmd.tcl -> Can be edited to call segno program. Currently only parses available output.
+Class_Xtl.mod.vmd.tcl -> Can be edited to call xtl program. Currently only parses available output.
